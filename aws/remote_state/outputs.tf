@@ -9,13 +9,13 @@ output "s3_bucket_arn" {
 }
 
 output "s3_bucket_region" {
-  value       = aws_s3_bucket.terraform_state.region
-  description = "The REGION of the S3 bucket"
+  value       = aws_s3_bucket.terraform_state.bucket_regional_domain_name
+  description = "The regional domain name of the S3 bucket"
 }
 
 output "dynamodb_table_name" {
   value       = aws_dynamodb_table.terraform_lock.name
-  description = "The ARN of the DynamoDB table"
+  description = "The NAME of the DynamoDB table"
 }
 
 output "dynamodb_table_arn" {
